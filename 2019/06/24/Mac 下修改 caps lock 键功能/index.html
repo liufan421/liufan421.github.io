@@ -103,7 +103,9 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g7xw6mma96j31cs0u00zy.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g7xw758t7nj31gk0osjwe.jpg">
-<meta property="og:updated_time" content="2019-10-14T17:23:09.464Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g7ynz0pxm5j30y60u0jxv.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g7ynzd0fjxj30y10u0gr1.jpg">
+<meta property="og:updated_time" content="2019-10-15T02:35:52.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 下修改 caps lock 键功能">
 <meta name="twitter:description" content="偶然发现 ctrl 作为修饰键在文本编辑中的强大作用，然而敲击该键非常不方便，很别扭，于是将之与 cpas lock 互换。后来一直心水 vim 的强大功能，同样有一个问题，vim 中高频率使用的 esc 也很不好按，网上流行的做法也是将之与 caps lock 互换。原本以为这是一个冲突，最近突然发现这是可以共存的，以下记录一下改键的步骤。 记录1. 准备安装 Mac 下改键神器 Karabin">
@@ -350,7 +352,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-15 01:23:09" itemprop="dateModified" datetime="2019-10-15T01:23:09+08:00">2019-10-15</time>
+                <time title="修改时间：2019-10-15 10:35:52" itemprop="dateModified" datetime="2019-10-15T10:35:52+08:00">2019-10-15</time>
               
             
           </span>
@@ -398,6 +400,19 @@
 <h3 id="3-软件设置"><a href="#3-软件设置" class="headerlink" title="3. 软件设置"></a>3. 软件设置</h3><p>打开 karabiner-elements，如图进行设置。</p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g7xw6mma96j31cs0u00zy.jpg" alt="Xnip2019-10-14_17-47-20"></p>
 <h3 id><a href="#" class="headerlink" title></a><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g7xw758t7nj31gk0osjwe.jpg" alt="Xnip2019-10-14_17-52-56"></h3><p>此时 <kbd>caps lock</kbd> 功能就改成了我们所需要的效果。</p>
+<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a>4. 注意事项</h3><p>如果按照步骤操作完了未生效，可以检查如下几个地方，看看是否没设置正确。</p>
+<ul>
+<li><p>软件权限设置：安全性与隐私 - 隐私 - 输入监视</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g7ynz0pxm5j30y60u0jxv.jpg" alt="Xnip2019-10-15_10-10-17"></p>
+</li>
+<li><p>系统键盘设置：键盘 - 键盘（tab）- 修饰键</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g7ynzd0fjxj30y10u0gr1.jpg" alt="Xnip2019-10-15_10-13-05"></p>
+</li>
+</ul>
+<h3 id="5-参考链接"><a href="#5-参考链接" class="headerlink" title="5. 参考链接"></a>5. 参考链接</h3><ul>
+<li><a href="https://medium.com/@pechyonkin/how-to-map-capslock-to-control-and-escape-on-mac-60523a64022b" target="_blank" rel="noopener">参考配置步骤</a></li>
+<li><a href="https://pqrs.org/osx/karabiner/json.html#typical-complex_modifications-examples-post-escape-if-left-control-is-pressed-alone" target="_blank" rel="noopener">参考配置文件</a></li>
+</ul>
 
       
     </div>
@@ -533,7 +548,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#记录"><span class="nav-number">1.</span> <span class="nav-text">记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-准备"><span class="nav-number">1.1.</span> <span class="nav-text">1. 准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-增加配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">2. 增加配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-软件设置"><span class="nav-number">1.3.</span> <span class="nav-text">3. 软件设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.4.</span> <span class="nav-text"></span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#记录"><span class="nav-number">1.</span> <span class="nav-text">记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-准备"><span class="nav-number">1.1.</span> <span class="nav-text">1. 准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-增加配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">2. 增加配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-软件设置"><span class="nav-number">1.3.</span> <span class="nav-text">3. 软件设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.4.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-注意事项"><span class="nav-number">1.5.</span> <span class="nav-text">4. 注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-参考链接"><span class="nav-number">1.6.</span> <span class="nav-text">5. 参考链接</span></a></li></ol></li></ol></div>
             
 
           </div>
