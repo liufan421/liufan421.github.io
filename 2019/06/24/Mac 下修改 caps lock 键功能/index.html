@@ -105,7 +105,7 @@
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g7xw758t7nj31gk0osjwe.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g7ynz0pxm5j30y60u0jxv.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/006y8mN6gy1g7ynzd0fjxj30y10u0gr1.jpg">
-<meta property="og:updated_time" content="2019-10-15T02:47:18.559Z">
+<meta property="og:updated_time" content="2019-10-15T02:49:59.619Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 下修改 caps lock 键功能">
 <meta name="twitter:description" content="偶然发现 ctrl 作为修饰键在文本编辑中的强大作用，然而敲击该键非常不方便，很别扭，于是将之与 cpas lock 互换。后来一直心水 vim 的强大功能，同样有一个问题，vim 中高频率使用的 esc 也很不好按，网上流行的做法也是将之与 caps lock 互换。原本以为这是一个冲突，最近突然发现这是可以共存的，以下记录一下改键的步骤。">
@@ -352,7 +352,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-15 10:47:18" itemprop="dateModified" datetime="2019-10-15T10:47:18+08:00">2019-10-15</time>
+                <time title="修改时间：2019-10-15 10:49:59" itemprop="dateModified" datetime="2019-10-15T10:49:59+08:00">2019-10-15</time>
               
             
           </span>
@@ -389,20 +389,20 @@
         <p>偶然发现 <kbd>ctrl</kbd> 作为修饰键在文本编辑中的强大作用，然而敲击该键非常不方便，很别扭，于是将之与 <kbd>cpas lock</kbd> 互换。后来一直心水 vim 的强大功能，同样有一个问题，vim 中高频率使用的 <kbd>esc</kbd> 也很不好按，网上流行的做法也是将之与 <kbd>caps lock</kbd> 互换。原本以为这是一个冲突，最近突然发现这是可以共存的，以下记录一下改键的步骤。</p>
 <a id="more"></a>
 
-<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><h3 id="1-准备"><a href="#1-准备" class="headerlink" title="1. 准备"></a>1. 准备</h3><p>安装 Mac 下改键神器 <a href="https://pqrs.org/osx/karabiner/" target="_blank" rel="noopener">Karabiner-Elements</a> ，目前已支持最新系统 Catalina。</p>
+<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>安装 Mac 下改键神器 <a href="https://pqrs.org/osx/karabiner/" target="_blank" rel="noopener">Karabiner-Elements</a> ，目前已支持最新系统 Catalina。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install karabiner-elements</span><br></pre></td></tr></table></figure>
 
 <p>安装过程需要输入用户密码。安装完成后先打开该软件，根据提示把所需权限加上，再退出，此时用户目录下会出现相应的配置文件夹，下一步增加配置文件需要用到。</p>
-<h3 id="2-增加配置文件"><a href="#2-增加配置文件" class="headerlink" title="2. 增加配置文件"></a>2. 增加配置文件</h3><p>进入配置文件夹下，增加配置文件。</p>
+<h3 id="增加配置文件"><a href="#增加配置文件" class="headerlink" title="增加配置文件"></a>增加配置文件</h3><p>进入配置文件夹下，增加配置文件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.config/karabiner/assets/complex_modifications</span><br><span class="line">vim custom-capslock.json</span><br></pre></td></tr></table></figure>
 
 <p>添加配置：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"title"</span>: <span class="string">"Change caps_lock to Esc and Control"</span>,</span><br><span class="line">    <span class="string">"rules"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">"description"</span>: <span class="string">"Post Esc if Caps is tapped, Control if held."</span>,</span><br><span class="line">            <span class="string">"manipulators"</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">"type"</span>: <span class="string">"basic"</span>,</span><br><span class="line">                    <span class="string">"from"</span>: &#123;</span><br><span class="line">                        <span class="string">"key_code"</span>: <span class="string">"caps_lock"</span>,</span><br><span class="line">                        <span class="string">"modifiers"</span>: &#123;</span><br><span class="line">                            <span class="string">"optional"</span>: [</span><br><span class="line">                                <span class="string">"any"</span></span><br><span class="line">                            ]</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="string">"to"</span>: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="string">"key_code"</span>: <span class="string">"left_control"</span>,</span><br><span class="line">                            <span class="string">"lazy"</span>: <span class="literal">true</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    ],</span><br><span class="line">                    <span class="string">"to_if_alone"</span>: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="string">"key_code"</span>: <span class="string">"escape"</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    ]</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-软件设置"><a href="#3-软件设置" class="headerlink" title="3. 软件设置"></a>3. 软件设置</h3><p>打开 karabiner-elements，如图进行设置。</p>
+<h3 id="软件设置"><a href="#软件设置" class="headerlink" title="软件设置"></a>软件设置</h3><p>打开 karabiner-elements，如图进行设置。</p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g7xw6mma96j31cs0u00zy.jpg" alt="Xnip2019-10-14_17-47-20"></p>
 <h3 id><a href="#" class="headerlink" title></a><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g7xw758t7nj31gk0osjwe.jpg" alt="Xnip2019-10-14_17-52-56"></h3><p>此时 <kbd>caps lock</kbd> 功能就改成了我们所需要的效果。</p>
-<h3 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4. 注意事项"></a>4. 注意事项</h3><p>如果按照步骤操作完了未生效，可以检查如下几个地方，看看是否没设置正确。</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>如果按照步骤操作完了未生效，可以检查如下几个地方，看看是否没设置正确。</p>
 <ul>
 <li><p>软件权限设置：安全性与隐私 - 隐私 - 输入监视</p>
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g7ynz0pxm5j30y60u0jxv.jpg" alt="Xnip2019-10-15_10-10-17"></p>
@@ -411,7 +411,7 @@
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g7ynzd0fjxj30y10u0gr1.jpg" alt="Xnip2019-10-15_10-13-05"></p>
 </li>
 </ul>
-<h3 id="5-参考链接"><a href="#5-参考链接" class="headerlink" title="5. 参考链接"></a>5. 参考链接</h3><ul>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
 <li><a href="https://medium.com/@pechyonkin/how-to-map-capslock-to-control-and-escape-on-mac-60523a64022b" target="_blank" rel="noopener">参考配置步骤</a></li>
 <li><a href="https://pqrs.org/osx/karabiner/json.html#typical-complex_modifications-examples-post-escape-if-left-control-is-pressed-alone" target="_blank" rel="noopener">参考配置文件</a></li>
 </ul>
@@ -550,7 +550,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#记录"><span class="nav-number">1.</span> <span class="nav-text">记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-准备"><span class="nav-number">1.1.</span> <span class="nav-text">1. 准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-增加配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">2. 增加配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-软件设置"><span class="nav-number">1.3.</span> <span class="nav-text">3. 软件设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.4.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-注意事项"><span class="nav-number">1.5.</span> <span class="nav-text">4. 注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-参考链接"><span class="nav-number">1.6.</span> <span class="nav-text">5. 参考链接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#记录"><span class="nav-number">1.</span> <span class="nav-text">记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">增加配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件设置"><span class="nav-number">1.3.</span> <span class="nav-text">软件设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.4.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">1.5.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接"><span class="nav-number">1.6.</span> <span class="nav-text">参考链接</span></a></li></ol></li></ol></div>
             
 
           </div>
